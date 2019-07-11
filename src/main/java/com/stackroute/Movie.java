@@ -1,6 +1,7 @@
 package com.stackroute;
 
-public class Movie {
+public class Movie
+{
     private String m_name;
     Actor actor; //creating object
 
