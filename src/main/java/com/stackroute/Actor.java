@@ -1,52 +1,46 @@
 package com.stackroute;
 
 public class Actor {
-    private String name;
-    private String gender;
+
+    // Declaration
+    private String name,gender;
     private int age;
 
-    public  Actor(String name,String gender,int age)
+    public Actor(String name, String gender, int age)
     {
-        this.name=name;
-        this.gender=gender;
-        this.age=age;
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
     }
-    public  Actor()
+    public Actor()
     {
 
     }
-    //setter and getter methods
-    public String getName() {
+
+    public String getName()
+    {
         return name;
+    }
+
+    public String getGender()
+    {
+        return gender;
+    }
+
+    public int getAge()
+    {
+        return age;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
     public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public void setAge(int age) {
         this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "Actor{" +
-                "name='" + name + '\'' +
-                ", gender=" + gender +
-                ", age=" + age +
-                '}';
-
     }
 }

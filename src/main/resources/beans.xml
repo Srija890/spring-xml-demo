@@ -5,18 +5,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="movie1"  class="com.stackroute.Movie" autowire="byName">
+    <bean id="movie" class="com.stackroute.Movie" scope="prototype" autowire="byName"/>
+    <bean id="movie1" class="com.stackroute.Movie" scope="prototype" autowire="byType"/>
+    <bean id="movie2" class="com.stackroute.Movie" scope="prototype" autowire="constructor"/>
 
-    </bean>
     <bean id="actor" class="com.stackroute.Actor">
-        <property name="name" value="Mahesh"/>
-        <property  name="gender" value="Male"/>
-        <property name="age" value="40"/>
-
+        <property name="name" value="Samantha"></property>
+        <property name="gender" value="Female"></property>
+        <property name="age" value="30"></property>
     </bean>
+
+    <bean id="beanlifecycle" class="com.stackroute.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
 
 </beans>
-
 
 
 
