@@ -5,8 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="movie1"  class="com.stackroute.Movie" name="MovieA,MovieB" autowire="byName">
-        <property name="m_name" value="Maharshi"  />
+    <bean id="movie1"  class="com.stackroute.Movie" autowire="byName">
+
     </bean>
     <bean id="actor" class="com.stackroute.Actor">
         <property name="name" value="Mahesh"/>
@@ -15,28 +15,9 @@
 
     </bean>
 
-    <bean id="movie2"  class="com.stackroute.Movie" scope="prototype" >
-        <constructor-arg index="0" value="Bahubali"  />
-        <constructor-arg index="1" ref="actor2"/>
-    </bean>
-    <bean id="actor2" class="com.stackroute.Actor">
-        <constructor-arg index="0" value="Prabhas"/>
-        <constructor-arg  index="1" value="Male"/>
-        <constructor-arg  index="2" value="38"/>
-
-    </bean>
-
-    <bean id="movie3"  class="com.stackroute.Movie" >
-        <constructor-arg name="m_name" value="Arundathi" type="java.lang.String"  />
-        <constructor-arg name="actor" ref="actor3" />
-    </bean>
-    <bean id="actor3" class="com.stackroute.Actor">
-        <constructor-arg  name="name" value="Anushka" type="java.lang.String"/>
-        <constructor-arg name="gender" value="Female" type="java.lang.String"/>
-        <constructor-arg  name="age" value="40" type="int"/>
-
-    </bean>
 </beans>
+
+
 
 
 

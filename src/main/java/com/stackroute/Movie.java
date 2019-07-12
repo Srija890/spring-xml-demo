@@ -1,46 +1,53 @@
 package com.stackroute;
 
-public class Movie
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class Movie implements BeanFactoryAware, BeanNameAware, ApplicationContextAware
 {
-    private String m_name;
-    Actor actor; //creating object
+    private Actor actor;
 
-    public  Movie(String m_name,Actor actor)
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException
     {
-        this.m_name=m_name;
-        this.actor=actor;
-    }
-    public  Movie()
-    {
-
-    }
-    //setter and getter methods
-    public  Actor getActor(){
-        return actor;
-    }
-
-    public void setActor(Actor actor) {
-        this.actor = actor;
-    }
-
-    public String getM_name() {
-        return m_name;
-    }
-
-    public void setM_name(String m_name) {
-        this.m_name = m_name;
+        System.out.println("Implementing BeanFactoryAware");
     }
 
     @Override
-    public String toString() {
-        return "Movie{" +
-                "m_name='" + m_name + '\'' +
-                ", actor=" + actor +
-                '}';
-
-   /* public  void display(){
-        System.out.println(""+actor.getName() +""+actor.getGender() +""+actor.getAge());
+    public void setBeanName(String s)
+    {
+        System.out.println("Implementing BeanNameAware");
     }
-*/
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException
+    {
+        System.out.println("Implementing ApplicationContext");
+    }
+
+    public Movie(Actor actor)
+    {
+        this.actor = actor;
+    }
+    public Movie()
+    {
+
+    }
+    public void setActor(Actor actor)
+    {
+        this.actor = actor;
+
+    }
+
+    public void display()
+    {
+        System.out.println("The actor information : " +actor.getName()+"  "+actor.getGender() +"   "+actor.getAge());
     }
 }
+
+
+
