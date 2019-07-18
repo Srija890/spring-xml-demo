@@ -18,7 +18,7 @@ public class Movie {
     }
 
     public  void display(){
-        System.out.println(""+actor.getAName() +""+actor.getAGender() +""+actor.getAAge());
+        System.out.println(""+actor.getActorName() +""+actor.getActorGender() +""+actor.getActorAge());
     }
 
 }

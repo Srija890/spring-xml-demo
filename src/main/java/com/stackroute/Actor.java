@@ -1,30 +1,30 @@
 package com.stackroute;
 
 public class Actor {
-    private String aname;
-    private String agender;
-    private  int aage;
+    private String actorname;
+    private String actorgender;
+    private  int actorage;
 
     //setter and getter methods
-    public String getAName() {
-        return name;
+    public String getActorName() {
+        return actorname;
     }
-    public void setAName(String aname) {
-        this.aname = aname;
-    }
-
-    public String getAGender() {
-        return agender;
-    }
-    public void setAGender(String agender) {
-        this.agender = agender;
+    public void setActorname(String actornname) {
+        this.actorname = actorname;
     }
 
-    public int getAAge() {
-        return aage;
+    public String getActorGender() {
+        return actorgender;
     }
-    public void setAAge(int aage) {
-        this.aage = aage;
+    public void setActorgender(String actorgender) {
+        this.actorgender = actorgender;
+    }
+
+    public int getActorAge() {
+        return actorage;
+    }
+    public void setActorage(int actorage) {
+        this.actorage = actorage;
     }
 
 }
